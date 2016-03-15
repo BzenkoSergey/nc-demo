@@ -19,6 +19,6 @@ module.exports = {
     },
 
     plugins: [
-        new FolderReplacementPlugin(/app\\components/, 'app\\direct\\components')
+        new FolderReplacementPlugin(/app\\common\\components/, 'app\\direct\\components')
     ]
 }

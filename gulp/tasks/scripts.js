@@ -6,16 +6,18 @@ var paths = require('../paths.js'),
 var gulp = libs.gulp,
     webpack = libs.webpack,
     watch = libs.watch,
-    ngTemplateUrl = libs.ngTemplateUrl;
+    ngTemplateUrl = libs.ngTemplateUrl,
+    livereload = libs.livereload;
 
 function task(distName, cb) {
     distName = distName || 'nc';
     var running = true;
     var tplsList = [];
  
-    gulp.src('./src/app/nc.ts')
+    gulp.src('./src/app/'+ distName + '/' + distName + '.ts')
         .pipe(webpack(require('./../../webpack/'+ distName +'.config.js')))
         .pipe(gulp.dest(paths.scripts.tmp))
+        .pipe(livereload())
 
         // only one file (ex: app.js)
         .on('data', function(chunk) {
@@ -46,11 +48,11 @@ function task(distName, cb) {
                 return true;
             }
 
-            console.log('SASS Watcher: ' + eName + ': ' + vinyl.path);
+            console.log('HTML Watcher: ' + eName + ': ' + vinyl.path);
 
             gulp.src(vinyl.path, {
                 base: './src/app/'
-            }).pipe(gulp.dest(paths.scripts.tmp));
+            }).pipe(gulp.dest(paths.scripts.tmp)).pipe(livereload());
         });
     }       
 }

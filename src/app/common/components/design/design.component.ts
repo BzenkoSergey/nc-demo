@@ -1,5 +1,5 @@
 let navbarComponent = {
-  templateUrl: 'app/components/dashboard/dashboard.html',
+  templateUrl: 'app/common/components/design/design.html',
 };
 
 export default navbarComponent;

@@ -11,7 +11,10 @@ var libs = {
 	watch: require('gulp-watch'),
     express: require('express'),
     webpack: require('webpack-stream'),
-    ngTemplateUrl: require('./plugins/ngTemplateUrl')
+    ngTemplateUrl: require('./plugins/ngTemplateUrl'),
+    WebpackDevServer: require("webpack-dev-server"),
+    livereload: require('gulp-livereload'),
+    connectLivereload: require('connect-livereload')
 
 	// watch: require('gulp-watch'),
     

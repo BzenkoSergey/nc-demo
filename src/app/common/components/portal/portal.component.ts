@@ -1,5 +1,5 @@
 let navbarComponent = {
-  templateUrl: 'app/portal/portal.html',
+  templateUrl: 'app/common/components/portal/portal.html',
   
   $routeConfig: [
     {
