@@ -49,6 +49,7 @@ var paths = {
 	templates: {
 		src: ['./src/app/**/*.html', '!./src/app/index.html'],
 		tmp: tmp + 'app/',
+        tpmFiles: tmp + 'app/**/*.html',
 		dist: dist
 	},
 	assets: {

@@ -1,5 +1,5 @@
 let navbarComponent = {
-  templateUrl: 'app/components/portal/header/header.html'
+  templateUrl: 'app/components/user/user.html',
 };
 
 export default navbarComponent;

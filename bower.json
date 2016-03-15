@@ -16,5 +16,13 @@
     "angular": "^1.5.0",
     "bootstrap": "^3.3.6",
     "angular-component-router": "^0.2.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
   }
 }

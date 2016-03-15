@@ -1,11 +1,11 @@
 import * as angular from 'angular';
-import component from './portal.component.ts';
 import header from './header/header.module.ts';
 import sidebar from './sidebar/sidebar.module.ts';
 
-
-import dashboard from './dashboard/dashboard.module.ts';
-import user from './user/user.module.ts';
+import dashboard from './../components/dashboard/dashboard.module.ts';
+import user from './../components/user/user.module.ts';
+import deals from './../components/deals/deals.module.ts';
+import design from './../components/design/design.module.ts';
 
 let module = angular.module('portal', [
     header.name,
@@ -13,8 +13,12 @@ let module = angular.module('portal', [
     
     dashboard.name,
     user.name,
+    deals.name,
+    design.name,
     'ngComponentRouter'
 ]);
+
+import component from './portal.component.ts';
 module.component('portal', component);
 
 module.value('$routerRootComponent', 'portal');

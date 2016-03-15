@@ -1,7 +1,5 @@
 let navbarComponent = {
-  controller: NavbarController,
-  controllerAs: 'vm',
-  templateUrl: 'app/components/portal/portal.html',
+  templateUrl: 'app/portal/portal.html',
   
   $routeConfig: [
     {
@@ -14,15 +12,18 @@ let navbarComponent = {
         path: '/user', 
         name: 'User', 
         component: 'user' 
+    },
+    {
+        path: '/deals', 
+        name: 'Deals', 
+        component: 'deals' 
+    },
+    {
+        path: '/design', 
+        name: 'Design', 
+        component: 'design' 
     }
   ]
 };
-
-class NavbarController {
-    name: string;
-  constructor() {
-    this.name = 'navbar';
-  }
-}
 
 export default navbarComponent;

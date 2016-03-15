@@ -8,8 +8,10 @@ var libs = {
 	rimraf: require('rimraf'),
 	mainBowerFiles: require('main-bower-files'),
 	inject: require('gulp-inject'),
+	watch: require('gulp-watch'),
     express: require('express'),
-    webpack: require('webpack-stream')
+    webpack: require('webpack-stream'),
+    ngTemplateUrl: require('./plugins/ngTemplateUrl')
 
 	// watch: require('gulp-watch'),
     

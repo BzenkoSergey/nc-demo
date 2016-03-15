@@ -14,16 +14,10 @@ gulp.task('clean-tmp', utils.getTask('cleanTmp'));
 gulp.task('connect', utils.getTask('connect'));
 
 /**
- * Templates
- */
-// gulp.task('templates', utils.getTask('templates'));
-// gulp.task('templates-watch', utils.getTask('templatesWatch'));
-
-/**
  * Scripts
  */
-gulp.task('scripts', utils.getTask('scripts'));
-// gulp.task('scripts-watch', utils.getTask('scriptsWatch'));
+gulp.task('scripts', utils.getTask('scripts').bind(null, 'nc'));
+gulp.task('scripts-direct', utils.getTask('scripts').bind(null, 'direct'));
 
 
 // /**
@@ -40,12 +34,23 @@ gulp.task('server', ['clean-tmp'], function() {
 	gulp.start('tmp');
 });
 
+gulp.task('server-direct', ['clean-tmp'], function() {
+	gulp.start('tmp-direct');
+});
+
 
 /**
  * Tmp build
  */
 gulp.task('tmp', [
 	'scripts',
+    'connect'
+], function() {
+    gulp.start('index');
+});
+
+gulp.task('tmp-direct', [
+	'scripts-direct',
     'connect'
 ], function() {
     gulp.start('index');
