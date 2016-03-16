@@ -24,5 +24,8 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "devDependencies": {
+    "restangular": "^1.5.2"
   }
 }
