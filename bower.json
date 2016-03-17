@@ -15,7 +15,9 @@
   "dependencies": {
     "angular": "^1.5.0",
     "bootstrap": "^3.3.6",
-    "angular-component-router": "^0.2.0"
+    "angular-component-router": "^0.2.0",
+    "q": "1.0.1",
+    "restful.js": "^0.9.6"
   },
   "overrides": {
     "bootstrap": {
@@ -24,8 +26,5 @@
         "dist/js/bootstrap.js"
       ]
     }
-  },
-  "devDependencies": {
-    "restangular": "^1.5.2"
   }
 }

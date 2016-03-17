@@ -1,6 +1,6 @@
 import * as angular from 'angular';
-import portal from './../common/components/portal/portal.module.ts';
+import index from './../common/containers/index/index.module.ts';
 
 angular.module('app', [
-    portal.name
+    index.name
 ]);
