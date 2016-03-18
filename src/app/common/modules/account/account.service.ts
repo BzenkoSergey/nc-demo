@@ -14,10 +14,24 @@ class AccountService {
         
         var defer = Q.defer(),
             promise = defer.promise;
+            
+        var DataProvider = (function() {
+            if(!!~params.email.indexOf('admin@')) {
+                return AccountDataProvider.one('data', 'admin.json');
+            }
+            return AccountDataProvider.one('data', 'guest.json');
+        })();
 
-        AccountDataProvider
+        DataProvider
             .get(params)
-            .then(function(data) {
+            .then(function(response) {
+                const entity = response.body();
+                const data = entity.data();
+
+                if(params.email === 'admin@admin.com') {
+                    data.role = 'admin';
+                }
+                
                 self.account = new AccountModel(data);
                 defer.resolve(self.account);
             })

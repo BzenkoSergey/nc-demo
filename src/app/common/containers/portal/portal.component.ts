@@ -1,7 +1,7 @@
 import * as Q from 'q';
 import AuthService from './../../modules/auth/auth.service.ts';
 
-let navbarComponent = {
+let descriptor = {
     templateUrl: 'app/common/containers/portal/portal.html',
     $routeConfig: [
         {
@@ -26,19 +26,20 @@ let navbarComponent = {
             component: 'design' 
         }
     ],
+    
     $canActivate: function($rootScope): Q.Promise<{}> {
         var defer = Q.defer(),
             promise = defer.promise;
-            
+
         if(AuthService.isAuthorized()) {
-            defer.reject(false);
+            defer.resolve(true);
             return promise;
         }
 
         AuthService
             .authorize()
             .then(function() {
-                defer.resolve();
+                defer.resolve(true);
             })
             .catch(function() {
                 $rootScope.$broadcast('unauthorized');
@@ -49,4 +50,4 @@ let navbarComponent = {
     }
 };
 
-export default navbarComponent;
+export default descriptor;

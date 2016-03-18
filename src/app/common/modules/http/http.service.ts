@@ -1,3 +1,3 @@
-import restful from 'restful.js';
+declare var restful: any;
 
-export default restful('/');
+export default restful(location.origin);

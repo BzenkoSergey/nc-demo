@@ -1,1 +1,10 @@
-DEALSSTATS
+<div class="panel panel-default">
+    <div class="panel-heading">Deals Stats</div>
+    
+    <table class="table table-bordered">
+        <tr ng-repeat="(key, value) in $ctrl.stats">
+            <td>{{key}}</td>
+            <td class="text-right">{{value}}$</td>
+        </tr>
+    </table>
+</div>

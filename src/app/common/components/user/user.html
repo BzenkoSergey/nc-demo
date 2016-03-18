@@ -1,8 +1,14 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <h2 class="margin-none">User</h2>
-    </div>
-    <div class="panel-body">
-        
-    </div>
+    <div class="panel-heading">Users</div>
+    
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <tr ng-repeat="user in $ctrl.users">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </table>
 </div>

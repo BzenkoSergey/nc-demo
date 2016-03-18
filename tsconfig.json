@@ -2,10 +2,22 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
+  
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true,
+    "resolveGlobs": true,
+    "forkChecker": true,
+    "cacheDirectory": "node_modules/.awesome-typescript-loader-cache"
+  },
+  
   "exclude": [
     "node_modules",
+    "bower_components",
     "dist",
     "build"
   ]

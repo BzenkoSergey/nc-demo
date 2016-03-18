@@ -25,6 +25,11 @@
         "dist/css/bootstrap.min.css",
         "dist/js/bootstrap.js"
       ]
+    },
+    "restful.js": {
+        "main": [
+            "dist/restful.standalone.min.js"
+        ]
     }
   }
 }

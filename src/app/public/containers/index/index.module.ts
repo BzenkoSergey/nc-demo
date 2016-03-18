@@ -1,12 +1,11 @@
 import * as angular from 'angular';
-import publicModule from './../../../common/containers/public/public.module.ts';
+import publicModule from './../public/public.module.ts';
 
 
 let module = angular.module('index', [
     publicModule.name,
   
-    'ngComponentRouter',
-    'restangular'
+    'ngComponentRouter'
 ]);
 
 import component from './index.component.ts';

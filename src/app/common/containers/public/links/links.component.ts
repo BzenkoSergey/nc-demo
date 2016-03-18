@@ -1,5 +1,10 @@
-let navbarComponent = {
-  templateUrl: 'app/common/containers/public/links/links.html'
-};
+class Component implements ng.IComponentOptions {
+    public templateUrl: string;
 
-export default navbarComponent;
+    constructor() {
+        this.templateUrl = 'app/common/containers/public/links/links.html';
+    }
+
+}
+
+export default new Component();

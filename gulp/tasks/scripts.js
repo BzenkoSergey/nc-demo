@@ -25,7 +25,8 @@ function task(distName, cb) {
                 .src(paths.scripts.tmpFiles)
                 .pipe(ngTemplateUrl({
                     urlPrefix: './src/',
-                    base: './src/app/'
+                    base: './src/app/',
+                    newResource: distName
                 }))
                 .pipe(gulp.dest(paths.scripts.tmp))
 

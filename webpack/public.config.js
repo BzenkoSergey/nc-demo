@@ -11,10 +11,19 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.ts', '.tsx']
     },
+    
+    externals: {
+        angular: 'angular',
+        'restful.js': 'restful'
+    },
 
     module: {
         loaders: [
-            { test: /\.ts$/, loaders: ['ts-loader'] }
+            {
+                test: /\.ts$/, 
+                loader: 'awesome-typescript-loader', 
+                exclude: [/\.(spec|e2e)\.ts$/]
+            }
         ]
     },
 

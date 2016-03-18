@@ -1,20 +1,31 @@
 var path = require('path');
+var webpack = require('webpack');
 var FolderReplacementPlugin = require('./plugins/FolderReplacementPlugin.js');
  
 module.exports = {
     output: {
-        filename: 'app.js'
+        filename: 'app.js',
+        publicPath: '/app/'
     },
     
     watch: true,
 
     resolve: {
-        extensions: ['', '.js', '.ts', '.tsx']
+        extensions: ['', '.js', '.ts', '.html', '.tsx']
     },
-
+    
+    externals: {
+        angular: 'angular',
+        'restful.js': 'restful'
+    },
+    
     module: {
         loaders: [
-            { test: /\.ts$/, loaders: ['ts-loader'] }
+            {
+                test: /\.ts$/, 
+                loader: 'awesome-typescript-loader', 
+                exclude: [/\.(spec|e2e)\.ts$/]
+            }
         ]
     },
 

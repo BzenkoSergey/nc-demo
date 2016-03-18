@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Deal 1",
+        "visits": 12
+    },
+    {
+        "name": "Deal 2",
+        "visits": 122
+    },
+    {
+        "name": "Deal 3",
+        "visits": 23
+    },
+    {
+        "name": "Deal 4",
+        "visits": 34
+    },
+    {
+        "name": "Deal 5",
+        "visits": 45
+    },
+    {
+        "name": "Deal 6",
+        "visits": 54
+    },
+    {
+        "name": "Deal 7",
+        "visits": 88
+    }
+]

@@ -1,1 +1,12 @@
-DESIGNHISTORY
+<div class="panel panel-default">
+    <div class="panel-heading">Design History</div>
+    
+    <ul class="list-group">
+        <li class="list-group-item" 
+            ng-repeat="(key, value) in $ctrl.history">
+            
+            <span class="badge">{{value}}</span>
+            {{key}}
+        </li>
+    </ul>
+</div>

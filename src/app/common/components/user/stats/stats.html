@@ -1,1 +1,12 @@
-USERSTATS1
+<div class="panel panel-default">
+    <div class="panel-heading">User Stats</div>
+    
+    <ul class="list-group">
+        <li class="list-group-item" 
+            ng-repeat="(key, value) in $ctrl.stats">
+            
+            <span class="badge">{{value}}</span>
+            {{key}}
+        </li>
+    </ul>
+</div>

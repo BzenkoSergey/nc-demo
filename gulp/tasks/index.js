@@ -14,7 +14,9 @@ function task() {
 
 	var target = gulp.src(paths.index.src),
 		sources = gulp.src(paths.scripts.tmpFiles);
-
+        
+    sources = gulp.src('./.tmp/app/app.js');
+    
 	return target
 		.pipe(inject(bowerFiles, {
             addPrefix: 'components',

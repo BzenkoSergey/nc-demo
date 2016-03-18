@@ -1,0 +1,7 @@
+{
+    "email": "admin@test.test",
+    "firstName": "test firstName",
+    "lastName": "test lastName",
+    "role": "admin",
+    "token": "test token"
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "name": "User 1",
+        "email": "edd1@sds.sd"
+    },
+    {
+        "name": "User 2",
+        "email": "edd2@sds.sd"
+    },
+    {
+        "name": "User 3",
+        "email": "edd3@sds.sd"
+    },
+    {
+        "name": "User 4",
+        "email": "edd4@sds.sd"
+    },
+    {
+        "name": "User 5",
+        "email": "edd5@sds.sd"
+    },
+    {
+        "name": "User 6",
+        "email": "edd6@sds.sd"
+    },
+    {
+        "name": "User 7",
+        "email": "edd7@sds.sd"
+    }
+]

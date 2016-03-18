@@ -1,0 +1,6 @@
+<div ng-if="$ctrl.account.role === 'admin'">
+    <admin-panel></admin-panel>
+</div>
+<div ng-if="$ctrl.account.role === 'guest'">
+    <guest-panel></guest-panel>
+</div>

@@ -3,8 +3,7 @@ import * as angular from 'angular';
 let module = angular.module('public.login', []);
 module.run(function($rootScope, $rootRouter) {
     $rootScope.$on('unauthorized', function() {
-        console.log('unauthorized');
-        $rootRouter.navigate(['Public','Login']);
+        $rootRouter.navigate(['Public', 'Login']);
     });
 });
 

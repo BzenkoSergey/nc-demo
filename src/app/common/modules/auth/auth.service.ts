@@ -1,4 +1,4 @@
-import Account from './../account/account.service.ts';
+import AccountService from './../account/account.service.ts';
 
 class AuthService {
     private authorized: boolean;
@@ -8,25 +8,27 @@ class AuthService {
     }
     
     public login(params) {
-        return Account
+        var self = this;
+        
+        return AccountService
             .fetch(params)
             .then(function(account: any) {
-                this.setAuthorized(account.token);
+                self.setAuthorized(account.email);
             });
     }
     
     public authorize (): Q.Promise<{}> {
         var token = this.getToken();
-        if(!token) {
-            var defer = Q.defer(),
-                promise = defer.promise;
+        var defer = Q.defer(),
+            promise = defer.promise;
                 
+        if(!token) {
             defer.reject(false);
             return promise;
         }
 
         this.login({
-                token: token
+                email: token
             })
             .then(function() {
                 defer.resolve();
@@ -36,6 +38,11 @@ class AuthService {
             });
         
         return promise;
+    }
+    
+    public logOut() {
+        this.clenToken();
+        this.authorized = false;
     }
     
     private setAuthorized(token) {
@@ -49,6 +56,10 @@ class AuthService {
     
     private saveToken(token) {
         window.localStorage.setItem('token', token);
+    }
+    
+    private clenToken() {
+        window.localStorage.removeItem('token');
     }
 }
 

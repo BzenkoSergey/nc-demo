@@ -1,9 +1,9 @@
 <ul class="nav navbar-nav">
-    <li class="active">
+    <li>
         <a ng-link="['Portal']">Portal</a>
     </li>
     <li>
-        <a ng-link="['Login']">Login</a>
+        <a ng-link="['Login']" ng-class="{ asas: $router.hostComponent == 'publicLogin' }">Login</a>
     </li>
     <li>
         <a ng-link="['About']">About</a>
